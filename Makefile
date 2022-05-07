@@ -1,5 +1,6 @@
 OBJs := $(patsubst %.cpp, %.o, $(wildcard *.cpp))
 BIN := minimu9-ahrs
+BINs := altimu10-ahrs
 
 CC := g++
 
@@ -54,6 +55,7 @@ man1dir = $(mandir)/man1
 .PHONY: install
 install: $(BIN)
 	install $(BIN) $(bindir)
+	install $(BINs) $(bindir)
 	install $(BIN)-calibrate $(bindir)
 	install $(BIN)-calibrator $(bindir)
 	install -m 0644 $(BIN).1 $(man1dir)

@@ -1,0 +1,2 @@
+#!/bin/sh
+exec minimu9-ahrs $@
